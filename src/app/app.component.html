@@ -1,0 +1,111 @@
+<!-- <div class="wizard">
+  <mdc-card class="card">
+  	<mdc-card-primary-action mdc-ripple>
+  		<mdc-card-media class="demo-card__media--16-9" [wide]="true"></mdc-card-media>
+  		<div class="demo-card__primary">
+  			<h2 class="demo-card__title" mdcHeadline6>Our Changing Planet</h2>
+  			<h3 class="demo-card__subtitle" mdcSubtitle2>by Kurt Wagner</h3>
+  		</div>
+  		<div class="demo-card__secondary" mdcBody2>
+  			Visit ten places on our planet that are undergoing the biggest changes today.
+  		</div>
+  	</mdc-card-primary-action>
+  	<mdc-card-actions>
+  		<mdc-card-action-buttons>
+  			<button mdc-button mdcCardAction="button">Read</button>
+  			<button mdc-button mdcCardAction="button">Bookmark</button>
+  		</mdc-card-action-buttons>
+  		<mdc-card-action-icons>
+  			<mdc-icon-toggle iconOn="favorite" iconOff="favorite_border" mdcCardAction="icon"></mdc-icon-toggle>
+  			<mdc-icon mdcCardAction="icon" mdcRipple>share</mdc-icon>
+  			<mdc-icon mdcCardAction="icon" mdcRipple>more_vert</mdc-icon>
+  		</mdc-card-action-icons>
+  	</mdc-card-actions>
+  </mdc-card>
+</div> -->
+
+<div class="wizard">
+  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>One</ng-template>
+        <mdc-card class="card">
+          <mdc-card-primary-action mdc-ripple>
+            <mdc-card-media class="demo-card__media--16-9" [wide]="true"></mdc-card-media>
+            <div class="demo-card__primary">
+              <h2 class="demo-card__title" mdcHeadline6>Our Changing Planet</h2>
+              <h3 class="demo-card__subtitle" mdcSubtitle2>by Kurt Wagner</h3>
+            </div>
+            <div class="demo-card__secondary" mdcBody2>
+              Visit ten places on our planet that are undergoing the biggest changes today.
+            </div>
+          </mdc-card-primary-action>
+          <mdc-card-actions>
+            <mdc-card-action-buttons>
+              <button mdc-button matStepperNext mdcCardAction="button">Volgende</button>
+            </mdc-card-action-buttons>
+            <mdc-card-action-icons>
+              <mdc-icon-toggle iconOn="favorite" iconOff="favorite_border" mdcCardAction="icon"></mdc-icon-toggle>
+              <mdc-icon mdcCardAction="icon" mdcRipple>share</mdc-icon>
+              <mdc-icon mdcCardAction="icon" mdcRipple>more_vert</mdc-icon>
+            </mdc-card-action-icons>
+          </mdc-card-actions>
+        </mdc-card>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Two</ng-template>
+        <mdc-card class="card">
+          <mdc-card-primary-action mdc-ripple>
+            <mdc-card-media class="demo-card__media--16-9" [wide]="true"></mdc-card-media>
+            <div class="demo-card__primary">
+              <h2 class="demo-card__title" mdcHeadline6>Our Changing Planet</h2>
+              <h3 class="demo-card__subtitle" mdcSubtitle2>by Kurt Wagner</h3>
+            </div>
+            <div class="demo-card__secondary" mdcBody2>
+              Visit ten places on our planet that are undergoing the biggest changes today.
+            </div>
+          </mdc-card-primary-action>
+          <mdc-card-actions>
+            <mdc-card-action-buttons>
+              <button mdc-button matStepperPrevious mdcCardAction="button">Vorige</button>
+              <button mdc-button matStepperNext mdcCardAction="button">Volgende</button>
+            </mdc-card-action-buttons>
+            <mdc-card-action-icons>
+              <mdc-icon-toggle iconOn="favorite" iconOff="favorite_border" mdcCardAction="icon"></mdc-icon-toggle>
+              <mdc-icon mdcCardAction="icon" mdcRipple>share</mdc-icon>
+              <mdc-icon mdcCardAction="icon" mdcRipple>more_vert</mdc-icon>
+            </mdc-card-action-icons>
+          </mdc-card-actions>
+        </mdc-card>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Three</ng-template>
+      <mdc-card class="card">
+        <mdc-card-primary-action mdc-ripple>
+          <mdc-card-media class="demo-card__media--16-9" [wide]="true"></mdc-card-media>
+          <div class="demo-card__primary">
+            <h2 class="demo-card__title" mdcHeadline6>Our Changing Planet</h2>
+            <h3 class="demo-card__subtitle" mdcSubtitle2>by Kurt Wagner</h3>
+          </div>
+          <div class="demo-card__secondary" mdcBody2>
+            Visit ten places on our planet that are undergoing the biggest changes today.
+          </div>
+        </mdc-card-primary-action>
+        <mdc-card-actions>
+          <mdc-card-action-buttons>
+            <button mdc-button matStepperPrevious mdcCardAction="button">Vorige</button>
+            <button mdc-button (click)="stepper.reset()" mdcCardAction="button">Reset</button>
+          </mdc-card-action-buttons>
+          <mdc-card-action-icons>
+            <mdc-icon-toggle iconOn="favorite" iconOff="favorite_border" mdcCardAction="icon"></mdc-icon-toggle>
+            <mdc-icon mdcCardAction="icon" mdcRipple>share</mdc-icon>
+            <mdc-icon mdcCardAction="icon" mdcRipple>more_vert</mdc-icon>
+          </mdc-card-action-icons>
+        </mdc-card-actions>
+      </mdc-card>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
